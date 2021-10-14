@@ -1,0 +1,206 @@
+    /* 
+css ile body kısmında bulunan her yazının boyutu büyütülebilir
+
+body{
+    text-transform: uppercase;
+}
+
+*/
+html,body, #menuBar{
+    height: 100%;
+    background-image: url("img/batman.jpg") no-repeat center center fixed;
+    background-size: cover;
+    
+}
+body {
+  background-image: url('img/head_bg.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+
+/* burada menünün tam sayfayı kapsamasını engelleyip ortalamaya çalışacağız 
+max-width verdiğimizde sayfanın başından verilen değere kadar alır bunu dengelemek için 
+ margin: 0 auto;
+ üst ve alttan 0 sağ soldan auto yapsın istiyorum.
+*/
+.fixed-top{
+    max-width: 1140px;
+    margin: 30px auto;
+}
+
+.navbar{
+    font-family: 'Russo One', sans-serif;
+}
+h1{
+    
+    margin-top: 48%;
+    font-style: italic;
+    font-family: 'Alata', sans-serif;
+}
+
+
+/* border : none çerceveyi kaldırıyor*/
+.btn-primary{
+    background-color: #D9BA31;
+    border: none;
+    text-transform: uppercase;
+    font-family: 'Russo One', sans-serif;
+}
+
+/*hover  özelliğini kaldırma işlemi
+butonun üzerine geldiğimizde backroud ve renk özelliklerini değiştirebiliyoruzs*/
+.btn-primary:hover{
+    background-color: #fff;
+    color:  #D9BA31;
+}
+
+
+/* menü kısmında olan linkler üzerinde işlem yapacağız 
+bootstrap menü rengini temel olarak verdiği için css ile değiştirmedi bu verdiği değeri ezmek için  !important kullandık
+*/
+a.nav-link{
+   color:#D9BA31 !important;
+
+}
+.navbar-brand{
+    color:#D9BA31 !important;
+}
+
+/* menü itemlara hover verdik
+transition: 0.5s ease; bu şekilde renk değişim süresini belirleriz
+*/
+a.nav-link:hover{
+    color:  blue !important;
+    transition: 0.8s ease;
+}
+.card{
+    text-transform: uppercase;
+}
+
+/* movie kısmına komple bir arka plan rengi ekledik ve padding vererek biraz boşluk bıraktık*/
+#movies{
+    background-color: #f7f7f7;
+    padding:120px;
+}
+
+/* üst kısımda olan başlığı aldık  text type verdik */
+.movies-top h3{
+    text-transform: uppercase;
+    font-family: 'Russo One', sans-serif;
+}
+
+/* önce üstte sadece h3 için büyütme yazdık sonrasında ikisine ortak aldık
+text ortalama işlemini html üzerinden direk verebiliyoruz
+*/
+.movies-top{
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/*bu işlemler olduğunda üst kısımda bulunan background kısmı ve menü kısmının tasarımının güzelleştirilmesi için
+ önce gidip bir class veriyoruz wrapper clasını verip sonrasında kodlarımızı ekliyoruz
+*/
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 940px;
+    padding-top: 120px;
+    padding-bottom: 120px;    
+}
+
+
+/* cardlar ile işlemler yapıyoruz 
+önce border kaldırdık sonrasında boşlukları ayarlıyoruz
+margin top veya margin verip sağ sol kısımlarını eklemeyebiliriz
+h4 için yazı tipi ve boşluk atadık
+p için italik olsun dedik ve yazı tipi verdik
+*/
+.card{
+    border-style: none;
+    margin: 50px 10px;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+.card h4{
+    margin-top: 20px;
+    font-family: 'Russo One', sans-serif;
+}
+
+.card p{
+    margin-top: 10px;
+    font-style: italic;
+    font-family: 'Alata', sans-serif;
+}
+
+
+.movies-top p{
+    margin-top: 10px;
+    font-size: large;
+    font-family: 'Alata', sans-serif;
+    color:#D9BA31;
+
+}
+
+/* about kısmına background verdik*/
+#about{
+    height: 100%;
+    background: url('/img/back-2.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.wrapper2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 940px;
+    padding-top: 120px;
+    padding-bottom: 120px;    
+}
+
+
+.about-top{
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 40px;
+    color:white;
+}
+
+
+.about-top p{
+    padding-top: 20px;
+    font-size: large;
+    font-family: 'Alata', sans-serif;
+    color:#D9BA31;
+}
+
+/*resimler arasına boşluk koydum*/
+#about .row{
+    margin-bottom:90px;
+}
+
+/*resimlerin yanında olan yazılar ile işlem yapacağız */
+.about-content h4{
+    margin-top: 20px;
+    font-family: 'Russo One', sans-serif;
+    color: #D9BA31;
+    font-style: italic;
+}
+
+.about-content h3{
+    font-family: 'Alata', sans-serif;
+    color: #D9BA31;
+    font-style: inherit;
+}
+
+.about-content p{
+    margin-top: 15px;
+    color: black;  
+
+}

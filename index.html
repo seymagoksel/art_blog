@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+
+
+
+<head>
+    <!-- Bootstap 2 şekilde eklenebilir biz cdn şeklinde uzak sistemden dosyalarımızı çekeceğiz-->
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <!-- responsive özelliklerimizi alması icin  width=device-width ile uygulamanın açıldığı ortama göre boyutlandırması için eklenmiştir
+    initial-scale=1 ise oran olarak 1 e 1 lik bir oranda çalışmasını istediğimiz için eklendi
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!--font ekledik -->
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Russo+One&display=swap" rel="stylesheet">
+
+    <!-- Css dosyamuzu ekleyeceğiz - en alta eklememizin sebebi en baskın olmasını istememiz-->
+    <link rel="stylesheet" type="text/css" href="css/app.css" />
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <!--section sayfadaki farklı alanları belirtmek için kullanıyoruz sadece 1 adet olduğu için id veriyoruz -->
+    <section id="menuBar">
+        <div class="container">
+            <div class="row">
+                <!-- MENÜ YAPIMI-->
+                <nav class="navbar navbar-expand-sm fixed-top ">
+                    <!-- fixed-top  menüyü en üste sabitliyor bunu silersek konumlandırmak için verdiğimiz justify kısmı hatalı çalışır yeniden css ile düzenlememiz gerekebilir-->
+                    <!-- navbar-light yerine nav-dark vb kullanılabilir bu renk veriyor -->
+                    <!-- bg-light ise background veriyor -->
+                    <!-- navbar-expand-sm toggle buttonunun açılma durumunun kontrolünü sağlıyor-->
+                    <!-- içerikleri büyük harfle yazabiliriz veya css ile büyütebiliriz-->
+                    <!-- logo olarak görmesi için bu şekilde ekliyoruz  navbar-brand -->
+                    <!-- bg-ligh silersek menü transparant olur-->
+                    <a class="navbar-brand" href="#">Art Office</a>
+                    <!-- toogle sayfa küçülünce menü itemlar buttonda toplansın diye yazıldı-->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!--justify-content-center menünün buton kısmını ortala-->
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Movies</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Very soon</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Services</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- bu kısımda yeni bir div açarak aşağıda olan button ve yazıyı ekliyoruz text center ile ortalıyoruz -->
+            <div class="row text-center wrapper">
+                <div class="col-md-12 col-sm-6">
+                    <h1>Welcome to Art</h1>
+                </div>
+
+                <div class="col-md-12 col-sm-6">
+                    <a href="#"> <button class="btn btn-primary" type="button">tell me more </button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Bu kısımda Card classı kullanarak yeni bir alan oluşturacağız -->
+    <!--top ve  alt kısım olarak ikiye ayırıyoruz. Başlık ve açıklama Top kısmında geri kalanlar aşağıda olacak -->
+
+    <section id="movies">
+        <div class="container">
+            <div class="movies-top">
+                <h3>movies </h3>
+                <p>öne çıkan Fİlmler</p>
+            </div>
+            <!-- card için bir alan açıp sonrasında onu oluşturuyoruz-->
+            <!-- ilk cardı oluşturduktan sonra aynı row içerisine 2 tane daha ekledik-->
+            <!-- ÖNEMLİ  card img top diyerek de işlem yapabiliriz -->
+            <div class="movie-card">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <img src="img/tenet.jpg" alt="movie_1" />
+                            <div class="card-block">
+                                <h4 class="card-title"> Tenet </h4>
+                                <p class="card-subtitle text-muted"> Tenet, dünyayı büyük bir tehlikeden kurtarmak için
+                                    savaşan bir kahramanın hikayesini konu ediyor. Gerçek zamanın ötesinde bir yerde
+                                    uluslararası bir casusluk görevini yerine getirmeye çalışan kahraman, dünyayı
+                                    kurtarabilmek için savaşmak zorunda kalır. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <img src="img/sherlock.jpeg" alt="movie_2" />
+                            <div class="card-block">
+                                <h4 class="card-title"> sherlock holmes 3 </h4>
+                                <p class="card-subtitle text-muted"> Sherlock Holmes ve yardımcısı Dr. Watson'ın
+                                    maceralarının anlatıldığı Sherlock Holmes filminin üçünce devam halkası olan filmin
+                                    başrollerini bir kez daha Robert Downey Jr. ve Jude Law üstleniyor. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+
+                        <div class="card">
+                            <img src="img/back-2.jpg" class="card-img-top" alt="movie_3" />
+                            <div class="card-block">
+                                <h4 class="card-title"> The Dark Knight </h4>
+                                <p class="card-subtitle text-muted">Kara Şövalye, halk için büyük bir tehdit oluşturan
+                                    Joker’in ortaya çıkması ile kaosa dönen Gotham Sokakları’nın yeniden kurtarıcılığını
+                                    üstlenen Batman’in hikayesini konu ediyor. Suç işleyenlerden arındırılan bir yer,
+                                    bir zaman sonra yeniden tehdit altında kalabilir ve işte o zaman yeniden kolları
+                                    sıvayacak olanların mücadelesi de daha keskin olarak hayata geçecektir. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <img src="img/matrix.jpg" alt="movie_4" />
+                            <div class="card-block">
+                                <h4 class="card-title"> Matrix 4</h4>
+                                <p class="card-subtitle text-muted">1999 yılında yayınlanan "Matrix" filminin dördüncü
+                                    devam halkası olan filmin yönetmen koltuğunda Lana Wachowski oturuyor. Neo
+                                    karakterini bir kez daha Keanu Reeves'in canlandırdığı filmin kadrosunda Carrie-Anne
+                                    Moss, Yahya Abdul-Mateen II, Jessica Henwick, Neil Patrick Harris, Jada Pinkett
+                                    Smith gibi isimler yer alıyor. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <img src="img/back.jpg" alt="movie_5" />
+                            <div class="card-block">
+                                <h4 class="card-title"> back to the future </h4>
+                                <p class="card-subtitle text-muted"> Geleceğe Dönüş'te, deli dolu bilimadamı Dr. Brown
+                                    zamanda yolculuğu mümkün kılan bir araba geliştirir. Bu makineyi ilk kullanan genç
+                                    Marty ufak bir zamanlama yanlışıyla gelecek yerine geçmişe gönderilir. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <img src="img/inception.jpg" alt="movie_6" />
+                            <div class="card-block">
+                                <h4 class="card-title"> inception </h4>
+                                <p class="card-subtitle text-muted"> Leonardo DiCaprio bu yapımda, çok yetenekli bir
+                                    hırsız olan "Dom Cobb " ile karşımızda. Uzmanlık alanı, zihnin en karanlık ve
+                                    savunmasız olduğu rüya görme anında, bilinçaltının derinliklerindeki değerli sırları
+                                    çekip çıkarmak ve onları çalmaktır. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="about">
+        <div class="container wrapper2">
+            <div class="about-top">
+                <h3>About movies </h3>
+                <p>important films for art history
+                </p>
+            </div>
+            <div class="about-content">
+                <div class="row">
+                    <!-- text right ile sağa yapışık yapabiliyorum istersem hepsine aynı classı verip css ile de yapabilirim-->
+                    <div class="col-4">
+                        <h4>February 19 - 1999 </h4>
+                        <h3> Office Space </h3>
+                        <p>Peter Gibbons orta yaş krizine biraz erken dalmış, işi veçalıştığı şirket için kendini heba
+                            eden bir bilgisayar programcısıdır.</p>
+                    </div>
+                    <div class="col-sm-4 text-center">
+                        <img src="img/portfolio-1.png" />
+                    </div>
+                </div>
+                <!-- Offset ile burada col-4 lük bir boşluk bırakıyoruz-->
+                <div class="row">
+                    <div class="col-sm-4 offset-sm-4 text-center"">
+                        <img src="img/portfolio-2.png" />
+                    </div>
+                    <div class="col-4">
+                        <h4>February 23 - 2001 </h4>
+                        <h3> cast away </h3>
+                        <p>FedEx isimli tanınmış bir şirkette sistem analist uzmanı olan Chuck Noland şirketiyle ilgili
+                            sorunları çözmek için dünya genelinde seyahatler yapmaktadır. </p>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-4">
+                        <h4>May 19 - 1995 </h4>
+                        <h3> Before Sunrise </h3>
+                        <p>Gün Doğmadan Önce, yolları kesişen bir kadın ve bir erkeğin hikayesini anlatıyor. Sıradan bir
+                            Avrupa yolculuğu sırasında trende karşılaşıp tanışan iki farklı insan, Jesse ve Celine bu
+                            yolculuğa sıradışı bir şekilde sürdürürler. </p>
+                    </div>
+                    <div class="col-sm-4 text-center">
+                        <img src="img/portfolio-3.png" />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-4 offset-sm-4 text-center">
+                        <img src="img/portfolio-4.png" />
+                    </div>
+                    <div class="col-4">
+                        <h4>September 21 - 2007 </h4>
+                        <h3>into the wild </h3>
+                        <p>Genç Christopher McCandless’ın (Emile Hirsch) ilham veren gerçek hikayesinden uyarlanan Into
+                            the Wild, rahat ve konforlu yaşamını terk ederek Alaska’nın kırsalında hayatının en büyük
+                            meydan okumasını gerçekleştirmek ve özgürlüğü yaşamak için yollara düşen Christopher’ın
+                            hikayesini anlatıyor.</p>
+                    </div>
+                </div>
+
+
+
+                <div class="row">
+                    <div class="col-sm-4 offset-sm-4 text-center">
+                        <a href="#">
+                            <img src="img/portfolio-5.png" />
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <!-- jquery kodlarını eklemek zorunda değiliz-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous">
+        
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous">
+            
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>
